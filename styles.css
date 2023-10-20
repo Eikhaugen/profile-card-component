@@ -1,25 +1,46 @@
 * {
     box-sizing: border-box;
+    font-family: "kumbh sans", serif;
 }
 
 body {
+    margin: 0;
     height: 100vh;
+    overflow: hidden;
     background-color: #19A1AE;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
 }
 
 .container{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     height: 374px;
     width: 326px;
     background-color: white;
     border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    border: 5px solid white;
+    position: absolute;
+    top: 92px;
+    justify-self: center;
+}
+
+.card-bg {
+    position: absolute;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    top: 0;
 }
 
 .stats {
@@ -27,6 +48,62 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
+    border-top: 1px solid #979797;
+    padding-bottom: 24px;
+    padding-top: 24px;
 }
-.attribution { font-size: 11px; text-align: center; }
+
+.name, .follower-count, .photo-count, .likes-count {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2E3349;
+    text-align: center;
+}
+
+.personal{
+    margin-bottom: 24px;
+}
+.location{
+    padding-top: 8px;
+    text-align: center;
+}
+
+.followers-title, .likes-title, .photo-title {
+    font-size: 10px;
+    color: #6B7082;
+    letter-spacing: 1.5px;
+}
+
+.location{
+    font-size: 14px;
+    color: #6B7082;
+}
+
+.age{
+    font-size: 18px;
+    color: #6B7082;
+}
+
+.pattern-top {
+    position: absolute;
+    z-index: 0;
+    right: 50%;
+    bottom: 50%;
+}
+
+.pattern-bottom {
+    position: absolute;
+    left: 45%;
+    bottom: -60%;
+    z-index: 0;
+}
+
+@media(min-width: 730px){
+    .container{
+        width: 350px;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center;
+z-index: 10}
 .attribution a { color: hsl(228, 45%, 44%); }
