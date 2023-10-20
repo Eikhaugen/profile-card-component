@@ -49,7 +49,8 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
-    border-top: 1px solid #979797;
+    height: 88px;
+    border-top: 1px solid #e8e9ec;
     padding-bottom: 24px;
     padding-top: 24px;
 }
@@ -64,15 +65,18 @@ body {
 .personal{
     margin-bottom: 24px;
 }
+
 .location{
     padding-top: 8px;
     text-align: center;
 }
 
-.followers-title, .likes-title, .photo-title {
+.title {
     font-size: 10px;
     color: #6B7082;
     letter-spacing: 1.5px;
+    margin-top: 5px;
+    text-align: center;
 }
 
 .location{
